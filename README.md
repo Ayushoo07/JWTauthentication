@@ -5,8 +5,8 @@ This project is a backend implementation of a login and signup REST API with sec
 Clone the Repository using link https://github.com/Ayushoo07/JWTauthentication.git
 
 ## Pre-Requisites
--JDK(17)
--maven
+-JDK(17) \n
+-maven 
 -Postman (testing of Api)
 
 # Step 2
