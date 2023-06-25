@@ -11,3 +11,18 @@ Clone the Repository using link https://github.com/Ayushoo07/JWTauthentication.g
 
 # Step 2
 Run the project by fetching all the dependencies carefully
+The application will start running on http://localhost:8080
+
+# Step 3-Test Api
+## Signup (Public Api -> anyone can access)
+->Method: POST
+->Path: http://localhost:808/Signup
+->Description: Add a new user.
+->Request Body: User data in the JSON format ( uname, email, password).
+
+{
+    "uname":"Ayush",
+    "email":"Ayush@gmail",
+    "password":"Ayush"
+
+}
