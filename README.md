@@ -48,16 +48,16 @@ The application will start running on http://localhost:8080 </br>
 ->Method: GET</br>
 ->Path: http://localhost:808/current-user    gives current user Email</br>
 ->Description: Gives Users Email</br>
-->Header: Key = Authorization </br>
-value =Bearer generated token   ( Strict Syntax Should be Followed ) </br>
+->Header: Key ::Authorization </br>
+value ::Bearer generatedtoken   (Single space after Bearer) </br>
 ex :Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2MCwiZXhwIjoxNjg3NzA4MTYwfQ.iwOxaUJYfR7zj5brvwFQBO52QnnQ6APLnrCzbmFnAAiV4f3ykQo8PTBoVhuF7S-pyluvvNRNgRSx9EiHMnOajw </br>
 
 ## 4 mydetails (Protected Api -> can be accessed using jwtToken only) </br>
 ->Method: GET</br>
 ->Path: http://localhost:808/mydetails  </br>
 ->Description: Gives User detail</br>
-->Header: Key = Authorization </br>
-value =Bearer generated token   ( Strict Syntax Should be Followed ) </br>
+->Header: Key ::Authorization </br>
+value ::Bearer generatedtoken   (Single space after Bearer) </br>
 ex :Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2MCwiZXhwIjoxNjg3NzA4MTYwfQ.iwOxaUJYfR7zj5brvwFQBO52QnnQ6APLnrCzbmFnAAiV4f3ykQo8PTBoVhuF7S-pyluvvNRNgRSx9EiHMnOajw </br>
 {
     "userId": 1,</br>
@@ -65,3 +65,12 @@ ex :Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2
     "password": "$2a$10$dhhwIAUuR1GBGwA077MYE./XE7i3mwc5d/OYq5l67jLMvZhmDi4ze",</br>
     "email": "Ayush@gmail"</br>
 } </br>
+
+# Tech Stack
+Java </br>
+Spring Boot </br>
+H2 Database </br>
+Spring Security </br>
+JWT Token </br>
+Lombok </br>
+Maven </br>
