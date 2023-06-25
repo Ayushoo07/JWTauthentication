@@ -6,23 +6,40 @@ Clone the Repository using link https://github.com/Ayushoo07/JWTauthentication.g
 
 ## Pre-Requisites
 -JDK(17) </br>
--maven 
--Postman (testing of Api)
+-maven </br>
+-Postman (testing of Api) </br>
 
 # Step 2
-Run the project by fetching all the dependencies carefully
-The application will start running on http://localhost:8080
+Run the project by fetching all the dependencies carefully </br>
+The application will start running on http://localhost:8080 </br>
 
 # Step 3-Test Api
-## Signup (Public Api -> anyone can access)
-->Method: POST
-->Path: http://localhost:808/Signup
-->Description: Add a new user.
-->Request Body: User data in the JSON format ( uname, email, password).
+## Signup (Public Api -> anyone can access) </br>
+->Method: POST</br>
+->Path: http://localhost:808/Signup</br>
+->Description: Add a new user.</br>
+->Request Body: User data in the JSON format ( uname, email, password).</br>
 
 {
     "uname":"Ayush",
     "email":"Ayush@gmail",
     "password":"Ayush"
 
-}
+} </br>
+
+## Login (public Api -> anyone can access) </br>
+->Method: POST</br>
+->Path: http://localhost:808/Login</br>
+->Description: Generates jwt token </br>
+->Request Body: User data in the JSON format ( email, password).</br>
+{
+    "email":"Ayush@gmail",
+    "password":"Ayush"
+
+} </br>
+
+-->OUTPUT </br>
+{
+    "jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2MCwiZXhwIjoxNjg3NzA4MTYwfQ.iwOxaUJYfR7zj5brvwFQBO52QnnQ6APLnrCzbmFnAAiV4f3ykQo8PTBoVhuF7S-pyluvvNRNgRSx9EiHMnOajw",
+    "username": "Ayush@gmail"
+} </br>
