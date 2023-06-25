@@ -16,7 +16,7 @@ The application will start running on http://localhost:8080 </br>
 # Step 3-Test Api
 ## 1> Signup (Public Api -> anyone can access) </br>
 ->Method: POST</br>
-->Path: http://localhost:808/Signup</br>
+->Path: http://localhost:8080/Signup</br>
 ->Description: Add a new user.</br>
 ->Request Body: User data in the JSON format ( uname, email, password).</br>
 
@@ -29,7 +29,7 @@ The application will start running on http://localhost:8080 </br>
 
 ## 2> Login (public Api -> anyone can access) </br>
 ->Method: POST</br>
-->Path: http://localhost:808/Login</br>
+->Path: http://localhost:8080/Login</br>
 ->Description: Generates jwt token </br>
 ->Request Body: User data in the JSON format ( email, password).</br>
 {
@@ -46,7 +46,7 @@ The application will start running on http://localhost:8080 </br>
 
 ## 3 current-user (Protected Api -> can be accessed using jwtToken only) </br>
 ->Method: GET</br>
-->Path: http://localhost:808/current-user    gives current user Email</br>
+->Path: http://localhost:8080/current-user    gives current user Email</br>
 ->Description: Gives Users Email</br>
 ->Header: Key ::Authorization </br>
 value ::Bearer generatedtoken   (Single space after Bearer) </br>
@@ -54,7 +54,7 @@ ex :Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2
 
 ## 4 mydetails (Protected Api -> can be accessed using jwtToken only) </br>
 ->Method: GET</br>
-->Path: http://localhost:808/mydetails  </br>
+->Path: http://localhost:8080/mydetails  </br>
 ->Description: Gives User detail</br>
 ->Header: Key ::Authorization </br>
 value ::Bearer generatedtoken   (Single space after Bearer) </br>
