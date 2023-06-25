@@ -14,7 +14,7 @@ Run the project by fetching all the dependencies carefully </br>
 The application will start running on http://localhost:8080 </br>
 
 # Step 3-Test Api
-## Signup (Public Api -> anyone can access) </br>
+## 1> Signup (Public Api -> anyone can access) </br>
 ->Method: POST</br>
 ->Path: http://localhost:808/Signup</br>
 ->Description: Add a new user.</br>
@@ -27,7 +27,7 @@ The application will start running on http://localhost:8080 </br>
 
 } </br>
 
-## Login (public Api -> anyone can access) </br>
+## 2> Login (public Api -> anyone can access) </br>
 ->Method: POST</br>
 ->Path: http://localhost:808/Login</br>
 ->Description: Generates jwt token </br>
@@ -42,4 +42,26 @@ The application will start running on http://localhost:8080 </br>
 {
     "jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2MCwiZXhwIjoxNjg3NzA4MTYwfQ.iwOxaUJYfR7zj5brvwFQBO52QnnQ6APLnrCzbmFnAAiV4f3ykQo8PTBoVhuF7S-pyluvvNRNgRSx9EiHMnOajw",
     "username": "Ayush@gmail"
+} </br>
+
+## 3 current-user (Protected Api -> can be accessed using jwtToken only) </br>
+->Method: GET</br>
+->Path: http://localhost:808/current-user    gives current user Email</br>
+->Description: Gives Users Email</br>
+->Header: Key = Authorization </br>
+value =Bearer generated token   ( Strict Syntax Should be Followed ) </br>
+ex :Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2MCwiZXhwIjoxNjg3NzA4MTYwfQ.iwOxaUJYfR7zj5brvwFQBO52QnnQ6APLnrCzbmFnAAiV4f3ykQo8PTBoVhuF7S-pyluvvNRNgRSx9EiHMnOajw </br>
+
+## 4 mydetails (Protected Api -> can be accessed using jwtToken only) </br>
+->Method: GET</br>
+->Path: http://localhost:808/mydetails  </br>
+->Description: Gives User detail</br>
+->Header: Key = Authorization </br>
+value =Bearer generated token   ( Strict Syntax Should be Followed ) </br>
+ex :Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBeXVzaEBnbWFpbCIsImlhdCI6MTY4NzY5MDE2MCwiZXhwIjoxNjg3NzA4MTYwfQ.iwOxaUJYfR7zj5brvwFQBO52QnnQ6APLnrCzbmFnAAiV4f3ykQo8PTBoVhuF7S-pyluvvNRNgRSx9EiHMnOajw </br>
+{
+    "userId": 1,</br>
+    "uname": "Ayush",</br>
+    "password": "$2a$10$dhhwIAUuR1GBGwA077MYE./XE7i3mwc5d/OYq5l67jLMvZhmDi4ze",</br>
+    "email": "Ayush@gmail"</br>
 } </br>
